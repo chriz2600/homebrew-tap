@@ -6,12 +6,12 @@ class XhdmiTools < Formula
   bottle :unneeded
 
   if OS.mac?
-    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/49e498cbb3f57d7f5ac0b2b80c00bec3/xhdmi-tools_0.0.8_darwin_amd64.tar.gz"
-    sha256 "42312badb08d0d6e9f1136aab9dd61e6593e5388371ba0773b1afa25b6938031"
+    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/17fd2e18d956294348821fd759238194/xhdmi-tools_0.0.8_darwin_amd64.tar.gz"
+    sha256 "dc3b9526653d7a71974f796e6484759de960e730b2f5531ac915d4f833218791"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/e402dc7e4a4363890e70deea6ae70136/xhdmi-tools_0.0.8_linux_amd64.tar.gz"
-      sha256 "e812374168dd4e7f2b4f1fbf9abaee437c8c7ee62bf93eaf2850c7a8bcb53658"
+      url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/60a10384c9cb24d5c873598af5fdb574/xhdmi-tools_0.0.8_linux_amd64.tar.gz"
+      sha256 "5f49bbbdf5729c4251fc517390787ee081a9cbb0ecb8f56f3fd50921fc01865a"
     end
   end
 
