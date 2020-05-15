@@ -2,16 +2,25 @@
 class XhdmiTools < Formula
   desc "XHDMI-Tools, e.g. for creating custom fonts and gamma/color maps"
   homepage "https://gitlab.com/chriz2600/xhdmi-tools"
-  version "0.0.10"
+  version "0.0.11"
   bottle :unneeded
 
   if OS.mac?
-    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/94114c5390cc629ce80feac0e3b40b37/xhdmi-tools_0.0.10_darwin_amd64.tar.gz"
-    sha256 "6f4aa34aece30893c066688d8eecdf588e69becf290eaec8eef94a6f50d2b277"
+    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/8b782d6c775244092c30ce814cda8cc7/xhdmi-tools_0.0.11_darwin_amd64.tar.gz"
+    sha256 "b83348d916fee830c567e0b47aba2e69662360364076fcca8de1bd41bba955b8"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/5fda1b64e491c2e27f41d51bdb414818/xhdmi-tools_0.0.10_linux_amd64.tar.gz"
-      sha256 "59ec539f8f6bc4283881c4ab1561f6db763804f818427e7b34669706f9892287"
+      url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/e06667474b88ee63477e1f4782fab67e/xhdmi-tools_0.0.11_linux_amd64.tar.gz"
+      sha256 "2d7365363e5f5a53fffdcd89e51ab5c4538d4931314da083d1896b7d44afda39"
+    end
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/e8c44e628f30809eaaea0b69e501d48d/xhdmi-tools_0.0.11_linux_arm64.tar.gz"
+        sha256 "fd0de6a0ed1ace26feeb22080e1d05270254f43602c4fa2b6713d0733b67142e"
+      else
+        url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/2ffe1eb372cff9ef482c1973b1a96276/xhdmi-tools_0.0.11_linux_arm.tar.gz"
+        sha256 "b9fec8917aebe3ba56558fc2ad96e55ff75f0183993129b3d94db0e0032fff3d"
+      end
     end
   end
 
