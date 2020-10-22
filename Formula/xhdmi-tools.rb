@@ -2,24 +2,24 @@
 class XhdmiTools < Formula
   desc "XHDMI-Tools, e.g. for creating custom fonts and gamma/color maps"
   homepage "https://gitlab.com/chriz2600/xhdmi-tools"
-  version "1.5.6"
+  version "1.5.7"
   bottle :unneeded
 
   if OS.mac?
-    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/244fecc7201c51d3cba05a68f6db4d49/xhdmi-tools_1.5.6_darwin_amd64.tar.gz"
-    sha256 "ef89073cc11516109be684f6c6a3247e2895e5a58a6bd47a334dcb128b45a42b"
+    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/7a38c4516c61f72fc52d42150e797ba1/xhdmi-tools_1.5.7_darwin_amd64.tar.gz"
+    sha256 "0876a0a7240ea4d20bed3f2d12d9ad9300210e65e09cb3f53da33b80da0803fa"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/b0154247cb2d8d2d80c97d58318af4c6/xhdmi-tools_1.5.6_linux_amd64.tar.gz"
-      sha256 "c5ab9343d62e6fb823d637e4840a2e5b11e1d7c513dc7433fe295764aaaa2b1a"
+      url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/20537b17c16cd1ba47f7d19dac353b43/xhdmi-tools_1.5.7_linux_amd64.tar.gz"
+      sha256 "383e0551e0196dc959bb110d54ae96efeebcdd8929f7f789cac7842ab0969a5b"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/b1149d58ae6188feec82658a051ead9e/xhdmi-tools_1.5.6_linux_arm64.tar.gz"
-        sha256 "ea87e801b1cb4a4cf861a966deae63000474d2e2554b259f7d0d1d9fbc071fab"
+        url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/b68bf0adc244476116900e0a64f53cd9/xhdmi-tools_1.5.7_linux_arm64.tar.gz"
+        sha256 "9aa58b47f125bcabc4e929efbdf6c1bbe096d257e029b8c7b1f3815ae51d82fe"
       else
-        url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/af10fd4d57594de4a125f75db2924103/xhdmi-tools_1.5.6_linux_arm.tar.gz"
-        sha256 "b9b6046b0bca786a9572ecaa1a693e123a385e45d242d62d2e6b955156de0f96"
+        url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/a31a039b4270d46b09397177607d6c9a/xhdmi-tools_1.5.7_linux_arm.tar.gz"
+        sha256 "c997962b5840bacc5a8ad3be37d7fe90ec3dfa30c948c11a57d9aedc43521ff6"
       end
     end
   end
