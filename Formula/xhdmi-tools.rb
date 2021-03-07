@@ -2,24 +2,24 @@
 class XhdmiTools < Formula
   desc "XHDMI-Tools, e.g. for creating custom fonts and gamma/color maps"
   homepage "https://gitlab.com/chriz2600/xhdmi-tools"
-  version "1.7.0"
+  version "1.7.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/33be08227097d803566bb18e514795c5/xhdmi-tools_1.7.0_darwin_amd64.tar.gz"
-    sha256 "86d6c757b3b1dfae366ea48b3de1ce5d82a6125cf2a689395abfc3ca6ce217e8"
+    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/28b4831e082e2360c1f5b8d080176cd3/xhdmi-tools_1.7.1_darwin_amd64.tar.gz"
+    sha256 "4d9cdc6124368c04dc71ede3211963b271dabd16f1c7920ad1c2c56d3a87171d"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/495d864b4b512f7a1131a9865238be7a/xhdmi-tools_1.7.0_linux_amd64.tar.gz"
-    sha256 "07fec4c272c9723f270a33ceb0e36fe5776efcf0e213db7eb05129a82212e64e"
+    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/a6d82d9c1ef210c7283e130d2771d286/xhdmi-tools_1.7.1_linux_amd64.tar.gz"
+    sha256 "5199216acdf73a102ace97c2610cc5e49458ab6ce30e88e81aa5695b1ff783cc"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/520a2147f4abda232c6d68f2b7161984/xhdmi-tools_1.7.0_linux_arm.tar.gz"
-    sha256 "6f75c3b9cd232910294988ad76688e6f3a0c66a0c324e43bf5500e41ea6ebfb5"
+    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/62e392d6b76ee09913e095d9b0d7edbe/xhdmi-tools_1.7.1_linux_arm.tar.gz"
+    sha256 "a4dcf2b2f1124d9d704863de401d7e0c5b8f9eec6feb98ed7f6d48aca987b367"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/b1468b5e64babe27843b14c2452a301a/xhdmi-tools_1.7.0_linux_arm64.tar.gz"
-    sha256 "04e34b6be91a76624fe4bd1d68d0f0b09d723bd42ed2c0c09af86c35d7062579"
+    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/d2e4e9053c0aeed451bf0aba536a1c84/xhdmi-tools_1.7.1_linux_arm64.tar.gz"
+    sha256 "0369606bf36bb55e71fc7e08bcdd73dad9c49f42bec616011c4c8ae4077ab185"
   end
 
   def install
