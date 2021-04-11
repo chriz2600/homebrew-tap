@@ -5,24 +5,24 @@
 class XhdmiTools < Formula
   desc "XHDMI-Tools, e.g. for creating custom fonts and gamma/color maps"
   homepage "https://gitlab.com/chriz2600/xhdmi-tools"
-  version "1.7.6"
+  version "1.7.7"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/927af6396baeea71dc13f2cfffc80dab/xhdmi-tools_1.7.6_darwin_amd64.tar.gz"
-    sha256 "34b1318679245fd703bc833f0c3fb33bee7d1c192bfdf575d412a3af9be0b17f"
+    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/667dc707c2c3a653d829f3c430c73f7a/xhdmi-tools_1.7.7_darwin_amd64.tar.gz"
+    sha256 "c0a846d4c43a02a3609a614ab2a4ff101869c7f2c427020cbc8b327e43436780"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/6b1b53f301d37cb982febecb3571ec8c/xhdmi-tools_1.7.6_linux_amd64.tar.gz"
-    sha256 "0ad6a05f9412137deca3bd3e8a843f7e7ccfced24e0c3d7559601b96501ea2e7"
+    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/d570a45bc2b8b8f15846bdeb14e3b19c/xhdmi-tools_1.7.7_linux_amd64.tar.gz"
+    sha256 "61182d0d20b184dbe198fa367b9a9b5854565869d1ed9c217b7d2acab955ab32"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/349c5a623a1fb04d8611f7296af63cee/xhdmi-tools_1.7.6_linux_arm.tar.gz"
-    sha256 "248ea95af04ca2469a12a641c584f1f5156afe1ddeab705d96f680024fcd90c0"
+    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/0a52ad1d2487c514377027cd307770d1/xhdmi-tools_1.7.7_linux_arm.tar.gz"
+    sha256 "4bd58cfd0067cceacbcd172fad04f3d79f9cf65503260c53f6289da9958d96d2"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/2bbec289d48f019de32e3dfa791baa50/xhdmi-tools_1.7.6_linux_arm64.tar.gz"
-    sha256 "479aab5c051fc43804ed3b2c9a3b8b5067bc55bea97dfb55e5c4a2c57c27067e"
+    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/fdc5d3055aa972851be40c89780fdc7b/xhdmi-tools_1.7.7_linux_arm64.tar.gz"
+    sha256 "4d521de9dc93368b4ae0828c0b54eecefb3ea317c142d719f8d0e6d8ec71d038"
   end
 
   def install
