@@ -5,24 +5,29 @@
 class XhdmiTools < Formula
   desc "XHDMI-Tools, e.g. for creating custom fonts and gamma/color maps"
   homepage "https://gitlab.com/chriz2600/xhdmi-tools"
-  version "1.7.9"
+  version "1.8.0"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/0a37ed6aa282f3ed865c5346c69b3e71/xhdmi-tools_1.7.9_darwin_amd64.tar.gz"
-    sha256 "00e38c5ca6ab6477dc04dab44fdfe872f056666db78b89184f910a8df6f7dc3f"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.0/downloads/xhdmi-tools_1.8.0_darwin_amd64.tar.gz"
+      sha256 "1d99cb0e7b4e5be68a6762b6b385a312363cad8278bde1bfbcc459d4fdac3fd8"
+    end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/d9a4b6ecf4bba5d7bb544c36e1895053/xhdmi-tools_1.7.9_linux_amd64.tar.gz"
-    sha256 "a4453533913f35df43746ec431a3fe8b7c4c49feabbc4e6f0f3b9a48a248c26d"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/736b080c63737fd68e5f9f4eb3566d00/xhdmi-tools_1.7.9_linux_arm.tar.gz"
-    sha256 "c5dc3486421eb2436dc56ba5b3ab1a09d5b4a57c163f0d0843381b9b911f28d5"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://gitlab.com/chriz2600/xhdmi-tools/uploads/26940272ac157cae1c35f5c9e089ae15/xhdmi-tools_1.7.9_linux_arm64.tar.gz"
-    sha256 "8a4cd0f6baa8549cc1f051d4607758d99fb0e0505479060b186d216cf05943c9"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.0/downloads/xhdmi-tools_1.8.0_linux_amd64.tar.gz"
+      sha256 "17eafbe8826d56e6651f37f098fb7b82f9b7b2eedabb690379cbedcc7fd8a93a"
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.0/downloads/xhdmi-tools_1.8.0_linux_arm.tar.gz"
+      sha256 "7de7eb3a5cbf5bb48d2e9015fd4fbd5314574144df9bf8a85d3085922266e2a0"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.0/downloads/xhdmi-tools_1.8.0_linux_arm64.tar.gz"
+      sha256 "9e2076cfbe2e5b10fc53aba1de1d2dcfb747846b04dde21dbd49029968576266"
+    end
   end
 
   def install
