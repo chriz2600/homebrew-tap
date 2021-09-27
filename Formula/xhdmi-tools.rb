@@ -5,28 +5,28 @@
 class XhdmiTools < Formula
   desc "XHDMI-Tools, e.g. for creating custom fonts and gamma/color maps"
   homepage "https://gitlab.com/chriz2600/xhdmi-tools"
-  version "1.8.1"
+  version "1.8.6"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.1/downloads/xhdmi-tools_1.8.1_darwin_amd64.tar.gz"
-      sha256 "04039672314ad78b258fd7ecf2f33c1fade78b52a08f01f6b0e8cc02cbb85368"
+      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.6/downloads/xhdmi-tools_1.8.6_darwin_amd64.tar.gz"
+      sha256 "fd8d6347c8fd09c923222ec0972fb4d4ba7f85b80420f78bbb7bc00b627765f4"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.1/downloads/xhdmi-tools_1.8.1_linux_amd64.tar.gz"
-      sha256 "9311b0e52a8883e2410657fead15d3972c45c0a9fb22775e2e246ae2b6ae3fe5"
+      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.6/downloads/xhdmi-tools_1.8.6_linux_amd64.tar.gz"
+      sha256 "afb0a56f74d6e294946e69d8c231f3e29045dda8a8720deaa45cff9527b0b901"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.1/downloads/xhdmi-tools_1.8.1_linux_arm.tar.gz"
-      sha256 "08116a0b2c9877a8766bf850b56d4cd111d6245925caa2e5b5a1b082bc442a03"
+      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.6/downloads/xhdmi-tools_1.8.6_linux_arm.tar.gz"
+      sha256 "7d9cd9c2d06e563521f971be467c8928892d445b2157aa83db60e064a87b3ade"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.1/downloads/xhdmi-tools_1.8.1_linux_arm64.tar.gz"
-      sha256 "57a7538589106380de24a197ec8066fe4a920d00dcfed6ab079f614390145f72"
+      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.6/downloads/xhdmi-tools_1.8.6_linux_arm64.tar.gz"
+      sha256 "bd4c9fc218638e9460d59292427a10cacc9566e6eaef9428676de406f32e5f35"
     end
   end
 
