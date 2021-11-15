@@ -6,7 +6,6 @@ class XhdmiTools < Formula
   desc "XHDMI-Tools, e.g. for creating custom fonts and gamma/color maps"
   homepage "https://gitlab.com/chriz2600/xhdmi-tools"
   version "1.8.6"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
