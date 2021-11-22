@@ -5,32 +5,43 @@
 class XhdmiTools < Formula
   desc "XHDMI-Tools, e.g. for creating custom fonts and gamma/color maps"
   homepage "https://gitlab.com/chriz2600/xhdmi-tools"
-  version "1.8.6"
-  bottle :unneeded
+  version "1.8.7"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.6/downloads/xhdmi-tools_1.8.6_darwin_amd64.tar.gz"
-      sha256 "fd8d6347c8fd09c923222ec0972fb4d4ba7f85b80420f78bbb7bc00b627765f4"
+      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.7/downloads/xhdmi-tools_1.8.7_darwin_amd64.tar.gz"
+      sha256 "ae3f1d9612ee1dcf954341df52778646812faf4a9cc99bf9b8f634ef4a286945"
+
+      def install
+        bin.install "xhdmi-tools"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.6/downloads/xhdmi-tools_1.8.6_linux_amd64.tar.gz"
-      sha256 "afb0a56f74d6e294946e69d8c231f3e29045dda8a8720deaa45cff9527b0b901"
-    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.6/downloads/xhdmi-tools_1.8.6_linux_arm.tar.gz"
-      sha256 "7d9cd9c2d06e563521f971be467c8928892d445b2157aa83db60e064a87b3ade"
+      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.7/downloads/xhdmi-tools_1.8.7_linux_arm.tar.gz"
+      sha256 "7050dacc70cd7f5b19772afcddddbc4bd3b0217a7310004ae721e6a92694eb2a"
+
+      def install
+        bin.install "xhdmi-tools"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.6/downloads/xhdmi-tools_1.8.6_linux_arm64.tar.gz"
-      sha256 "bd4c9fc218638e9460d59292427a10cacc9566e6eaef9428676de406f32e5f35"
-    end
-  end
+      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.7/downloads/xhdmi-tools_1.8.7_linux_arm64.tar.gz"
+      sha256 "b580f07a7664672e644d6051bc4023e264ca91cda2cba1d6f59b8b614b31dba7"
 
-  def install
-    bin.install "xhdmi-tools"
+      def install
+        bin.install "xhdmi-tools"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.7/downloads/xhdmi-tools_1.8.7_linux_amd64.tar.gz"
+      sha256 "a1b898f136f8c1dd8715c8c55b0b0511b6cd44ef086608ab509a026450179439"
+
+      def install
+        bin.install "xhdmi-tools"
+      end
+    end
   end
 end
