@@ -5,47 +5,47 @@
 class XhdmiTools < Formula
   desc "XHDMI-Tools, e.g. for creating custom fonts and gamma/color maps"
   homepage "https://gitlab.com/chriz2600/xhdmi-tools"
-  version "1.8.8"
+  version "1.8.9"
 
   on_macos do
-    url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.8/downloads/xhdmi-tools_1.8.8_darwin_amd64.tar.gz"
-    sha256 "e910845e04d3d84196f27eb2fdd9a6a2c4333dab8bfa74180f4d6a54b453802d"
-
-    def install
-      bin.install "xhdmi-tools"
-    end
-
     if Hardware::CPU.arm?
-      def caveats
-        <<~EOS
-          The darwin_arm64 architecture is not supported for the XhdmiTools
-          formula at this time. The darwin_amd64 binary may work in compatibility
-          mode, but it might not be fully supported.
-        EOS
-      end
-    end
-  end
-
-  on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.8/downloads/xhdmi-tools_1.8.8_linux_arm.tar.gz"
-      sha256 "907afffe7f83ddce9066271541a5f336e45e36f92315560d26ca5ea063ab825a"
-
-      def install
-        bin.install "xhdmi-tools"
-      end
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.8/downloads/xhdmi-tools_1.8.8_linux_arm64.tar.gz"
-      sha256 "92ad70fac4613d96c3392ec0e1b303204381d25c0ce3095e896784789bf97f42"
+      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.9/downloads/xhdmi-tools_1.8.9_darwin_arm64.tar.gz"
+      sha256 "e0d2dc19c23e7a49cecea169b9a310ebd0e369cc451c119305c7f125fb514e17"
 
       def install
         bin.install "xhdmi-tools"
       end
     end
     if Hardware::CPU.intel?
-      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.8/downloads/xhdmi-tools_1.8.8_linux_amd64.tar.gz"
-      sha256 "1cb3ad6bab414675a0b7845f4fcd3253c7148e8d0c6023d63ef082ddb918acd4"
+      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.9/downloads/xhdmi-tools_1.8.9_darwin_amd64.tar.gz"
+      sha256 "a9f88e3d6acec7853615d19f12a711dc009d79f6bf3399216714a83d76205575"
+
+      def install
+        bin.install "xhdmi-tools"
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.9/downloads/xhdmi-tools_1.8.9_linux_arm.tar.gz"
+      sha256 "f65f9e9ff632e6ad29f00d3ec278f641578c994f51b8f1955e24ed9c679f7836"
+
+      def install
+        bin.install "xhdmi-tools"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.9/downloads/xhdmi-tools_1.8.9_linux_arm64.tar.gz"
+      sha256 "2bad277be56562c5ca9df906051a5803da4140344c815d215e163705ef6e5906"
+
+      def install
+        bin.install "xhdmi-tools"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.9/downloads/xhdmi-tools_1.8.9_linux_amd64.tar.gz"
+      sha256 "d91da606e1bebc9c986db55952533161ce606fa25e2cab33eafc60331337ba68"
 
       def install
         bin.install "xhdmi-tools"
