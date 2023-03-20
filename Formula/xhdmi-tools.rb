@@ -10,7 +10,7 @@ class XhdmiTools < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.10/downloads/xhdmi-tools_1.8.10_darwin_arm64.tar.gz"
-      sha256 "67458ed1fad4e7a644a2fe296d4d7ecfe5d51068b7171f64a00114bb09cc56de"
+      sha256 "d763e563c8e63380badd00efc396ba2829bf0e1eda0473e78f23148182217d24"
 
       def install
         bin.install "xhdmi-tools"
@@ -18,7 +18,7 @@ class XhdmiTools < Formula
     end
     if Hardware::CPU.intel?
       url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.10/downloads/xhdmi-tools_1.8.10_darwin_amd64.tar.gz"
-      sha256 "fd11be8398901d76067c168891335ca6d7b9d008e201d95ab97e220d76a7d81a"
+      sha256 "60d8e5931086e61a4f47fa33974e2134b1499f30b0e3606625748f01b9eb4684"
 
       def install
         bin.install "xhdmi-tools"
@@ -29,7 +29,7 @@ class XhdmiTools < Formula
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.10/downloads/xhdmi-tools_1.8.10_linux_arm.tar.gz"
-      sha256 "20e14eac526f5c68154be63e2df2c7a1811a290ac1feb42fd63f493283494b53"
+      sha256 "2c0e13fd3f5942cc5cf178af59b39dba4145103f65f45575ee242e299c5d9fc5"
 
       def install
         bin.install "xhdmi-tools"
@@ -37,7 +37,7 @@ class XhdmiTools < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.10/downloads/xhdmi-tools_1.8.10_linux_arm64.tar.gz"
-      sha256 "370ab0f5ce372ab63e1900a48c44f423480cf0b0b81adc0cdab819d472d81505"
+      sha256 "2ac99b0ba9d59004a72d4995e37959597cd0c1bfc753d15c7000e5b2cf87fd6a"
 
       def install
         bin.install "xhdmi-tools"
@@ -45,7 +45,7 @@ class XhdmiTools < Formula
     end
     if Hardware::CPU.intel?
       url "https://gitlab.com/chriz2600/xhdmi-tools/-/releases/1.8.10/downloads/xhdmi-tools_1.8.10_linux_amd64.tar.gz"
-      sha256 "cf63a870c39fec54d08b6738b8abee05c001e4fe7083ca7caa12611e2d7c6296"
+      sha256 "b836470b6db2367e0b524e1c11c3885bcd54318d7cd42ce54b3e2e50f2088430"
 
       def install
         bin.install "xhdmi-tools"
